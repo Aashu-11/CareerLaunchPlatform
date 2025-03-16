@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 261 56% 54%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 261 56% 54%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-hackohire-bg text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'SF Pro Display', sans-serif;
+  }
+
+  .bg-hackohire-bg {
+    background-color: var(--background);
+  }
+
+  .pages-index {
+    --background: 230 35% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 230 35% 7%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 230 35% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 263 85% 68%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 32% 25%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 214 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 214 32% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 25%;
+    --input: 214 32% 25%;
+    --ring: 263 85% 68%;
+
+    --radius: 0.75rem;
+  }
+  
+  .pages-index * {
+    @apply border-border selection:bg-purple-500/20 selection:text-white;
+  }
+  
+  .pages-index html {
+    @apply scroll-smooth;
+  }
+  
+  .pages-index body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  .pages-index .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .pages-index .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .pages-index .glass {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-glass;
+  }
+
+  .pages-index .glass-dark {
+    @apply backdrop-blur-xl bg-navy-600/80 border border-white/5 shadow-glass;
+  }
+
+  .pages-index .neo {
+    @apply bg-navy-600 border border-navy-500 shadow-neo rounded-xl;
+  }
+
+  .pages-index .text-glow {
+    text-shadow: 0 0 10px rgba(99, 91, 255, 0.5);
+  }
+
+  .pages-index .text-gradient-blue-purple {
+    @apply bg-clip-text text-transparent bg-blue-purple-gradient;
+  }
+
+  .pages-index .text-gradient-gold-navy {
+    @apply bg-clip-text text-transparent bg-gold-navy-gradient;
+  }
+
+  .pages-index .shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .pages-index .shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: translateX(-100%);
+    animation: shine 2.5s infinite;
+  }
+
+  @keyframes shine {
+    10% {
+      transform: translateX(-100%);
+    }
+    50%, 100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .pages-index .parallax-layer {
+    will-change: transform;
+  }
+
+  .pages-index #root {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom classes */
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-lg border border-white/10;
+  }
+  
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-full;
+  }
+  
+  .glow {
+    box-shadow: 0 0 10px rgba(93, 63, 211, 0.5),
+                0 0 30px rgba(93, 63, 211, 0.3);
+  }
+  
+  .card-flip {
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  .card-flip:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* NeumorphismStyles */
+  .neumorph {
+    @apply bg-hackohire-bg;
+    box-shadow: 
+      10px 10px 20px rgba(166, 180, 200, 0.7),
+      -10px -10px 20px rgba(255, 255, 255, 0.8);
+  }
+  
+  .neumorph-inset {
+    @apply bg-hackohire-bg;
+    box-shadow: 
+      inset 5px 5px 10px rgba(166, 180, 200, 0.7),
+      inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Scroll Animation */
+  .scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  
+  .scroll-animation.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hide scrollbar but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Smooth transition */
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  /* Perspective for 3D effects */
+  .perspective {
+    perspective: 1000px;
+  }
+}
