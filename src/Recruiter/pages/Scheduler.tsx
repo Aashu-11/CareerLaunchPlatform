@@ -418,15 +418,7 @@ export default function Scheduler() {
                     </div>
                     
                     {/* Error message */}
-                    <div className="bg-gray-800/60 rounded-lg p-4 mb-6">
-                      <h3 className="text-xl font-semibold mb-2 text-white">Video Connection Error</h3>
-                      <div className="flex items-center mb-3">
-                        <AlertCircle className="h-5 w-5 text-red-500 mr-2" />
-                        <p className="text-gray-200">{connectionError}</p>
-                      </div>
-                      <p className="text-gray-400 text-sm">Please check your camera and microphone permissions. This application uses LiveKit for real-time video conferencing.</p>
-                    </div>
-                    
+                 
                     {/* Mock control bar */}
                     <div className="bg-gray-800 p-3 rounded-lg flex justify-center space-x-4">
                       <button className="p-3 bg-gray-700 rounded-full" disabled>

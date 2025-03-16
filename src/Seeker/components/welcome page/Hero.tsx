@@ -40,9 +40,7 @@ const Hero = () => {
     "Elevate Your Job Search with Next-Gen AI."
   ];
 
-  const handleGetStartedClick = () => {
-    navigate('/recruiter/login');
-  };
+ 
 
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
@@ -80,7 +78,6 @@ const Hero = () => {
             glow
             className="group"
             icon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
-            onClick={handleGetStartedClick}
           >
             Get Started Now
           </Button>
