@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
 import Login from './Seeker/pages/Login';
 import Dashboard from './Seeker/pages/Dashboard';
 import JobSearch from './Seeker/pages/JobSearch';
@@ -25,6 +24,7 @@ import { Analytics } from './Recruiter/pages/Analytics';
 import { Settings } from './Recruiter/pages/Settings';
 import { queryClient } from "./Recruiter/lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
+import RecruiterHackOHire from './Recruiter/pages/HackOHire';
 
 function App() {
 
@@ -60,6 +60,7 @@ function App() {
                   <Route path="scheduler" element={<Scheduler />} />
                   <Route path="analytics" element={<Analytics />} />
                   <Route path="settings" element={<Settings />} />
+                  <Route path="hackathons" element={<RecruiterHackOHire />} /> {/* New route for recruiter */}
                 </Routes>
               </div>
             </div>

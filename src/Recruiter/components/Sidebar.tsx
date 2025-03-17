@@ -16,8 +16,10 @@ const navItems = [
   { icon: Search, label: 'Candidate Search', path: '/recruiter/candidates' },
   { icon: UserCheck, label: 'AI Shortlisting', path: '/recruiter/shortlist' },
   { icon: Calendar, label: 'Interview Scheduler', path: '/recruiter/scheduler' },
+  { icon: Calendar, label: 'Hackathons', path: '/recruiter/hackathons' }, // New nav item
   { icon: LineChart, label: 'Analytics', path: '/recruiter/analytics' },
   { icon: Settings, label: 'Settings', path: '/recruiter/settings' },
+
 ];
 
 export const Sidebar = () => {
