@@ -21,7 +21,6 @@ import { Candidates } from './Recruiter/pages/Candidates';
 import { Shortlist } from './Recruiter/pages/Shortlist';
 import  Scheduler  from './Recruiter/pages/Scheduler';
 import { Analytics } from './Recruiter/pages/Analytics';
-import { Settings } from './Recruiter/pages/Settings';
 import { queryClient } from "./Recruiter/lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import RecruiterHackOHire from './Recruiter/pages/HackOHire';
@@ -59,7 +58,6 @@ function App() {
                   <Route path="shortlist" element={<Shortlist />} />
                   <Route path="scheduler" element={<Scheduler />} />
                   <Route path="analytics" element={<Analytics />} />
-                  <Route path="settings" element={<Settings />} />
                   <Route path="hackathons" element={<RecruiterHackOHire />} /> {/* New route for recruiter */}
                 </Routes>
               </div>

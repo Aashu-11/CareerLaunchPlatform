@@ -22,7 +22,7 @@ export const generateHackathonDescription = async (topic: string): Promise<strin
           parts: [{
             text: `Generate a compelling and professional hackathon description for the following topic: ${topic}. 
                    Include key points about what participants will learn, the challenge they'll face, and potential impact. 
-                   Keep it concise but engaging, around 2-3 paragraphs.`
+                   Keep it concise but engaging, in around less than 150 words and ensure you write everything in plain text and dont include any kind of special characters like * , # etc and ensure it looks very nice and appealing for participants.`
           }]
         }]
       }
@@ -43,7 +43,7 @@ export const suggestHackathonRequirements = async (topic: string): Promise<strin
         contents: [{
           parts: [{
             text: `Generate a list of technical requirements and prerequisites for a hackathon on the topic: ${topic}. 
-                   Include necessary skills, tools, and any specific knowledge areas participants should have.`
+                   Include necessary skills, tools, and any specific knowledge areas participants should have. Keep it concise but engaging, in around less than 150 words and ensure you write everything in plain text and dont include any kind of special characters like * , # etc and ensure it clerly depicts the requirements for the hackathon.`
           }]
         }]
       }

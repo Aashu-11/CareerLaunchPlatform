@@ -18,7 +18,6 @@ const navItems = [
   { icon: Calendar, label: 'Interview Scheduler', path: '/recruiter/scheduler' },
   { icon: Calendar, label: 'Hackathons', path: '/recruiter/hackathons' }, // New nav item
   { icon: LineChart, label: 'Analytics', path: '/recruiter/analytics' },
-  { icon: Settings, label: 'Settings', path: '/recruiter/settings' },
 
 ];
 

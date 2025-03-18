@@ -118,7 +118,9 @@ export const Shortlist = () => {
         2. Key strengths and alignment with role
         3. Potential areas for discussion
         4. Specific interview recommendations
-        5. Cultural fit evaluation`;
+        5. Cultural fit evaluation
+        
+        Also provide the entire details in plain text format and ensure that you dont include any kind of special characters like * , # etc and ensure it would help the recruiter to analyze the resume thoroughly.`;
 
       const feedback = await generateContent(prompt);
       setCandidates(prev => prev.map(c => 

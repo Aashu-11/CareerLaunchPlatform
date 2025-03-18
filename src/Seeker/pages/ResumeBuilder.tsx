@@ -10,7 +10,7 @@ import { format } from 'date-fns';
 import { FileText, Plus, Trash2, Download, Wand2, Loader, Palette, Layout, Type, Image, Settings, Share, Calendar, Link, Award, PenTool as Tool, Globe, Phone, MapPin, Mail, Github, Linkedin, Upload, X } from 'lucide-react';
 
 // Initialize Google Generative AI
-const genAI = new GoogleGenerativeAI('AIzaSyBv3KqwRAmc2cvEHYVIanjSuV9NNP63Q6U');
+const genAI = new GoogleGenerativeAI('AIzaSyAAzxjwlmE0Si1K7si4kzXpoZA5QHnbgnU');
 
 const ResumeBuilder = () => {
   const [activeSection, setActiveSection] = useState('personal');
@@ -86,8 +86,8 @@ const ResumeBuilder = () => {
   const enhanceWithAI = async (section: string, text: string) => {
     setLoading(true);
     try {
-      const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-      const prompt = `Enhance this ${section} description professionally: ${text}`;
+      const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+      const prompt = `Enhance this ${section} description professionally: ${text} in less than 80 words and ensure you use no special symbols like * , # etc and also ensure everything is in plain text and looks very nice on resume.`;
       const result = await model.generateContent(prompt);
       const response = await result.response;
       const enhancedText = response.text();
@@ -300,8 +300,7 @@ const ResumeBuilder = () => {
               />
             ) : (
               <div className="text-center">
-                <Upload className="h-8 w-8 mx-auto text-gray-400" />
-                <span className="text-sm text-gray-500">Upload Photo</span>
+             
               </div>
             )}
           </div>

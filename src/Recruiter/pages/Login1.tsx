@@ -83,7 +83,7 @@ const Login1 = () => {
             {[
               {
                 title: "AI-Powered Candidate Matching",
-                description: "Our advanced AI algorithms find the perfect candidates based on your job requirements."
+                description: "Our advanced AI algorithms find the perfect candidates based on your job requirements providing ou with the detailed reports about candidates and helping find the best fit for you."
               },
               {
                 title: "Smart Job Posting",
