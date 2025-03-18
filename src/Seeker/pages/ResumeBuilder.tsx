@@ -288,23 +288,7 @@ const ResumeBuilder = () => {
           </div>
         </div>
 
-        <div className="w-32">
-          <div className="aspect-square rounded-lg border-2 border-dashed border-gray-300 
-                       flex flex-col items-center justify-center cursor-pointer
-                       hover:border-purple-500 transition-colors duration-200">
-            {formData.personal.photo ? (
-              <img
-                src={formData.personal.photo}
-                alt="Profile"
-                className="w-full h-full object-cover rounded-lg"
-              />
-            ) : (
-              <div className="text-center">
-             
-              </div>
-            )}
-          </div>
-        </div>
+      
       </div>
 
       <div>

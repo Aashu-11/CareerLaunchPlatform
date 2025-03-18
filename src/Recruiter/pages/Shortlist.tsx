@@ -268,7 +268,7 @@ export const Shortlist = () => {
                         <ThumbsDown className="w-5 h-5" />
                       </button>
                       <button
-                        onClick={() => window.location.href = `/scheduler?candidate=${selectedCandidate}`}
+                        onClick={() => window.location.href = `/recruiter/scheduler?candidate=${selectedCandidate}`}
                         className="p-2 rounded-lg hover:bg-purple-50 text-purple-600 transition-colors"
                       >
                         <MessageSquare className="w-5 h-5" />
