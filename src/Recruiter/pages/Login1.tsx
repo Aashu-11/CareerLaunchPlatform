@@ -76,7 +76,14 @@ const Login1 = () => {
           className="relative z-10 text-white max-w-lg"
         >
           <h1 className="text-4xl font-bold mb-6">
-            Welcome Back, Recruiter!
+            <motion.h1
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.2 }}
+  className="text-4xl font-bold mb-6"
+>
+  Welcome Back, Recruiter!
+</motion.h1>cruiter!
           </h1>
           
           <div className="space-y-6">
